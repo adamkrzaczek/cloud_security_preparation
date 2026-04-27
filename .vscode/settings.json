@@ -1,0 +1,6 @@
+{
+    "python.defaultInterpreterPath": "/home/adamkrzaczek/projects/cloud_security_preparation/CloudGoat/cloudgoat/bin/python",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.useLibraryCodeForTypes": true,
+    "python.analysis.typeCheckingMode": "basic"
+}

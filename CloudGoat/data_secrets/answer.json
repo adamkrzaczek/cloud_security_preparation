@@ -1,0 +1,10 @@
+{
+    "ARN": "arn:aws:secretsmanager:us-east-1:448477199438:secret:cg-final-flag-cgid5hse8ar7w3-ZzlnBQ",
+    "Name": "cg-final-flag-cgid5hse8ar7w3",
+    "VersionId": "terraform-20260421142135739000000002",
+    "SecretString": "{\"flag\":\"d4t4_s3cr3ts_4r3_fun\"}",
+    "VersionStages": [
+        "AWSCURRENT"
+    ],
+    "CreatedDate": "2026-04-21T16:21:43.307000+02:00"
+}
