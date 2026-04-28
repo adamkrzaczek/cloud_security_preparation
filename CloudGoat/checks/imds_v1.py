@@ -10,7 +10,7 @@ def run(session, region: str, fix_flag: bool):
                     metadata_option = instance.get("MetadataOptions",{})
                     http_token = metadata_option.get("HttpTokens")
                     if http_token == "optional":
-                        print(f"[!] {region}:IMDSv1 ENABLED on {instance_id} ({instance.get('InstanceType')})")
+                        print(f"[!] {region}: IMDSv1 ENABLED on {instance_id} ({instance.get('InstanceType')})")
                         if fix_flag :
                             fix(ec2,instance_id)
 
