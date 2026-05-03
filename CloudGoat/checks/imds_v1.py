@@ -1,12 +1,13 @@
 from botocore.exceptions import ClientError
+import boto3
 
-def run(session, region: str, fix_flag: bool):
+def run(session: boto3.Session, region: str, fix_flag: bool):
         ec2 = session.client("ec2", region_name=region)
         paginator = ec2.get_paginator("describe_instances")
         for page in paginator.paginate():
             for reservation in page.get("Reservations",[]):
                 for instance in reservation.get("Instances",[]):
-                    instance_id = instance.get('InstanceId')
+                    instance_id = instance.get('InstanceId',"Unknown")
                     metadata_option = instance.get("MetadataOptions",{})
                     http_token = metadata_option.get("HttpTokens")
                     if http_token == "optional":
